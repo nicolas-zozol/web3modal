@@ -100,6 +100,7 @@ export class Core {
       await this.providerController.connectToCachedProvider();
       return;
     }
+    /** SWAAP changes: we want to display the popup with Terms and conditions io
     if (
       this.userOptions &&
       this.userOptions.length === 1 &&
@@ -107,7 +108,7 @@ export class Core {
     ) {
       await this.userOptions[0].onClick();
       return;
-    }
+    } */
     await this._toggleModal();
   }
 
