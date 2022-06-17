@@ -37,7 +37,9 @@ const ConnectToWalletConnect = (
       infuraId,
       rpc,
       chainId,
-      qrcodeModalOptions
+      qrcodeModalOptions,
+      // Avoiding wallet connect to poll too much on infura api key
+      pollingInterval:3600*1000*24
     });
     try {
       await provider.enable();
